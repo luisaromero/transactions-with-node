@@ -1,6 +1,6 @@
 const pool = require('../db/pool');
 
-async function getClientes(req, res) {
+async function getCustomers(req, res) {
     const { rut } = req.query;
 
     try {
@@ -18,6 +18,7 @@ async function getClientes(req, res) {
         }
 
         // GET ?filtro=clientes -> lista completa
+        // pool query nos trae un objeto gigante así que lo destructuramos , y solo nos traemos row
         const { rows } = await pool.query('SELECT * FROM clientes');
         res.status(200).json(rows);
 
@@ -27,4 +28,4 @@ async function getClientes(req, res) {
     }
 }
 
-module.exports = { getClientes };
+module.exports = { getCustomers };

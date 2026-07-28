@@ -1,16 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-const clientesController = require('../controllers/customers');
+const customersController = require('../controllers/customers');
+
+const addressController = require('../controllers/address');
 
 router.get('/', (req, res) => {
     const { filtro } = req.query;
 
     if (filtro === 'clientes') {
-        return clientesController.getClientes(req, res);
+        return customersController.getClientes(req, res);
+    }
+    if (filtro === 'direcciones') {
+        return addressController.getAddress(req, res);
     }
 
-    // por ahora, si el filtro no existe todavía, respondemos claro
     res.status(400).json({ ok: false, mensaje: 'Filtro no reconocido o no implementado' });
 });
 
