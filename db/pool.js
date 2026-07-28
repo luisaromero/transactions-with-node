@@ -13,13 +13,15 @@ const pool = new Pool({
 
 })
 
+module.exports = pool;
 
-pool.connect(err => {
+
+pool.connect((err, client, release) => {
     if (err) {
-        console.error('error de conexion', err.stack)
+        console.error('error de conexion', err.stack);
+    } else {
+        console.log('conectado');
+        release(); // devuelve la conexión de prueba al pool
     }
-    else {
-        console.log('conectado')
-    }
-})
+});
 
