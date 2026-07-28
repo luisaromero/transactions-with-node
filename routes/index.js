@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const clientesController = require('../controllers/clientes.controller');
+const clientesController = require('../controllers/customers');
 
 router.get('/', (req, res) => {
     const { filtro } = req.query;

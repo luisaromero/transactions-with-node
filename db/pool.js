@@ -13,7 +13,6 @@ const pool = new Pool({
 
 })
 
-module.exports = pool;
 
 
 pool.connect((err, client, release) => {
@@ -24,4 +23,7 @@ pool.connect((err, client, release) => {
         release(); // devuelve la conexión de prueba al pool
     }
 });
+
+module.exports = pool;
+
 
