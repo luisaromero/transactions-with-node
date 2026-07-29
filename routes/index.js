@@ -31,4 +31,6 @@ router.get('/', (req, res) => {
     res.status(400).json({ ok: false, mensaje: 'Filtro no reconocido o no implementado' });
 });
 
+router.post('/orden', ordersController.createOrder)
+
 module.exports = router;
