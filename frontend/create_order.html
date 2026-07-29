@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear orden — Tienda Pádel</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Crear nueva orden</h1>
+      <a href="index.html">← Volver al menú</a>
+    </header>
+
+    <main>
+      <form id="form-search-address">
+        <label for="rut">RUT del cliente</label>
+        <input
+          type="text"
+          id="rut"
+          name="rut"
+          placeholder="12345678-5"
+          required
+        />
+        <button type="submit">Buscar direcciones</button>
+      </form>
+
+      <p id="msg-address"></p>
+
+      <form id="form-crear-orden" class="text-hidden">
+        <label for="address">Dirección de despacho</label>
+        <select id="address" required></select>
+
+        <h3>Productos</h3>
+        <ul id="list-products-form"></ul>
+
+        <button type="submit">Crear orden</button>
+      </form>
+
+      <p id="msg-result"></p>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/createOrder.js"></script>
+  </body>
+</html>
