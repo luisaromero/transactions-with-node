@@ -30,3 +30,7 @@ async function apiPost(path, body) {
 
     return data;
 }
+
+function formaterPrice(value) {
+    return new Intl.NumberFormat('es-CL').format(value);
+}

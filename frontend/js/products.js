@@ -18,7 +18,7 @@ async function loadProducts() {
             name.textContent = product.nombre;
 
             const price = document.createElement('p');
-            price.textContent = `Precio: $${product.precio}`;
+            price.textContent = `Precio: $${formaterPrice(product.precio)}`;
 
             const stock = document.createElement('p');
             stock.textContent = `Stock: ${product.existencias}`;
