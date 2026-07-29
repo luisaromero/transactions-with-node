@@ -7,7 +7,10 @@ const addressController = require('../controllers/address');
 
 const dispatchController = require('../controllers/dispatch');
 
-const productsController = require('../controllers/productos');
+const productsController = require('../controllers/products');
+
+const ordersController = require('../controllers/orders');
+
 
 router.get('/', (req, res) => {
     const { filtro } = req.query;
@@ -21,6 +24,8 @@ router.get('/', (req, res) => {
     if (filtro === 'despachos') return dispatchController.getDispatch(req, res);
 
     if (filtro === 'productos') return productsController.getProducts(req, res);
+
+    if (filtro === 'ordenes') return ordersController.getOrders(req, res);
 
 
     res.status(400).json({ ok: false, mensaje: 'Filtro no reconocido o no implementado' });
