@@ -1,3 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #000;
+}
+
+.top-bar {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* HEADER */
+
+.header {
+  background: #fafafa;
+  border-bottom: 1px solid #ececec;
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem;
+}
+
+.header p {
+  color: #777;
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+}
+
+/* MENU PRINCIPAL */
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.menu-link {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 24px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  transition: 0.3s ease;
+}
+
+.menu-link:hover {
+  transform: translateY(-2px);
+  border-color: #d5d5d5;
+  color: #111;
+}
+
+/* FORMULARIOS (buscar por rut, crear orden) */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 24px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #8b8b8b;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  background: #fafafa;
+  color: #1a1a1a;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #111;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* MENSAJES DE ESTADO / ERROR */
+
+#status-message {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0 1rem;
+}
+
+/* LISTAS: productos, ordenes */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.orden-item,
+.product-item {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 24px;
+  padding: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.orden-item:hover,
+.product-item:hover {
+  transform: translateY(-4px);
+}
+
+.orden-item h3,
+.product-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.orden-item p,
+.product-item p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.order-confirmed {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 24px;
+  padding: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+}
+
+/* LISTA DE PRODUCTOS DENTRO DEL FORM DE CREAR ORDEN */
+
+#list-products-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-template-columns: none;
+}
+
+.product-form-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+}
+
+.product-form-item label {
+  flex: 1;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 0.4rem;
+}
+
+/* Utilidad para ocultar elementos via JS */
+
 .text-hidden {
   display: none;
 }

@@ -114,6 +114,7 @@ formCreateOrder.addEventListener('submit', async (event) => {
         });
 
         msgResult.textContent = `Orden #${results.id_orden} creada. Total: $${formaterPrice(results.precio_total)}`;
+        msgResult.classList.add('order-confirmed');
         formCreateOrder.reset();
         formCreateOrder.classList.add('text-hidden');
 
