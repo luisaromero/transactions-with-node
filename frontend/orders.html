@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Órdenes por cliente — Tienda Pádel</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Órdenes de un cliente</h1>
+      <a href="index.html">← Volver al menú</a>
+    </header>
+
+    <main>
+      <form id="form-buscar-ordenes">
+        <label for="rut">RUT del cliente</label>
+        <input
+          type="text"
+          id="rut"
+          name="rut"
+          placeholder="12345678-5"
+          required
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      <p id="mensaje-estado"></p>
+      <ul id="lista-ordenes" class="ordenes-lista"></ul>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/ordenes.js"></script>
+  </body>
+</html>
