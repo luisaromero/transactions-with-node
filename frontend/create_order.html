@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crear orden — Tienda Pádel</title>
+    <title>Create Order — Padel Store</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <div class="top-bar">
-      PÁDEL CIAGA — Diseñando productos para mujeres que juegan pádel
+      PADEL CIAGA — Designing products for women who play padel
     </div>
     <header class="header">
-      <h1>Crear nueva orden</h1>
-      <a href="index.html">← Volver al menú</a>
+      <h1>Create New Order</h1>
+      <a href="index.html">← Back to menu</a>
     </header>
 
     <main>
       <form id="form-search-address">
-        <label for="rut">RUT del cliente</label>
+        <label for="rut">Customer National ID (RUT)</label>
         <input
           type="text"
           id="rut"
@@ -25,19 +25,19 @@
           placeholder="12345678-5"
           required
         />
-        <button type="submit">Buscar direcciones</button>
+        <button type="submit">Search addresses</button>
       </form>
 
       <p id="msg-address"></p>
 
       <form id="form-crear-orden" class="text-hidden">
-        <label for="address">Dirección de despacho</label>
+        <label for="address">Shipping address</label>
         <select id="address" required></select>
 
-        <h3>Productos</h3>
+        <h3>Products</h3>
         <ul id="list-products-form"></ul>
 
-        <button type="submit">Crear orden</button>
+        <button type="submit">Create order</button>
       </form>
 
       <p id="msg-result"></p>
